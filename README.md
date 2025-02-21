@@ -15,7 +15,7 @@ A framework for fake quantization in PyTorch implementing several quantization-a
 
 
 Demonstrations for the methodologies can be found in:
-+ [eakirtas\quantization_demo](https://github.com/eakirtas/quantization_demo)
++ [eakirtas/quantization_demo](https://github.com/eakirtas/quantization_demo)
 + [eakirtas/gradual_mixed_quant](https://github.com/eakirtas/gradual_mixed_quant)
 
 ## Citations
