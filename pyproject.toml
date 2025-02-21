@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "torch_fquant"
+name = "torch-fquant"
 version = "0.0.1"
 description = ""
 authors = ["Manos Kirtas <manolis.kirt@gmail.com>"]
