@@ -43,14 +43,14 @@ class QTensor(T.nn.Module):
 
     @T.no_grad()
     def set_bits(self, num_bits):
-        self.num_bits = T.tensor(num_bits)
+        self.num_bits = T.tensor(num_bits).to(DEVICE)
         self.q_min, self.q_max = self.get_q(self.num_bits)
 
     @T.no_grad()
     def get_q(self, num_bits):
 
         self.q_min = T.tensor(0.).to(DEVICE)
-        self.q_max = 2.**num_bits - 1.
+        self.q_max = T.tensor(2.**num_bits - 1.).to(DEVICE)
 
         return self.q_min, self.q_max
 
@@ -99,7 +99,6 @@ class QuantizeTensor(T.autograd.Function):
     @staticmethod
     def forward(ctx, x, x_q):
         q_x = (x_q.zeropoint + x / x_q.scale)
-
         q_x.clamp_(x_q.q_min, x_q.q_max).round_()
         return q_x.byte()
 
