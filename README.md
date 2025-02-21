@@ -30,7 +30,6 @@ Demonstrations for the methodologies can be found in:
   year={2022},
   publisher={Elsevier}
 }
-
 ```
 
 ```
