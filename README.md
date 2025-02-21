@@ -4,6 +4,17 @@ A framework for fake quantization in PyTorch implementing several quantization-a
 + Kirtas, Manos, Athina Oikonomou, Nikolaos Passalis, George Mourgias-Alexandris, Miltiadis Moralis-Pegios, Nikos Pleros, and Anastasios Tefas. "[Quantization-aware training for low precision photonic neural networks.](https://www.sciencedirect.com/science/article/abs/pii/S0893608022003598)" Neural Networks 155 (2022): 561-573. 
 + Kirtas, Manos, Nikolaos Passalis, Athina Oikonomou, Miltos Moralis-Pegios, George Giamougiannis, Apostolos Tsakyridis, George Mourgias-Alexandris, Nikolaos Pleros, and Anastasios Tefas. "[Mixed-precision quantization-aware training for photonic neural networks.](https://link.springer.com/article/10.1007/s00521-023-08848-8)" Neural Computing and Applications 35, no. 29 (2023): 21361-21379. 
 
+|-----------------|---------------|--------------------|--------------------------------------------------------------------------|
+| Methods         | Post Training | Quantization Aware | Related Code                                                             |
+|-----------------|---------------|--------------------|--------------------------------------------------------------------------|
+| Normalized      | [X]           | [X]                | [normalized.py](./torch_fquant/v2/observers/normalized.py)               |
+| Moving Average  | [X]           | [X]                | [movingaverage.py](./torch_fquant/v2/observers/movingaverage.py)         |
+| MinMax          | [X]           | [X]                | [minmax.py](./torch_fquant/v2/observers/minmax.py)                       |
+| MinMaxSTD       | [X]           | [X]                | [minmaxstd.py](./torch_fquant/v2/observers/minmax.py)                    |
+| SimplerMinMax   | [X]           | [X]                | [minmax_simpler.py](./torch_fquant/v2/observers/minmax_simpler.py)       |
+| Mixed Precision | []            | [X]                | [gaussian_qscheduler.py](./torch_fquant/v2/mixed/gaussian_qscheduler.py) |
+
+
 Demonstrations for the methodologies can be found in:
 + [eakirtas\quantization_demo](https://github.com/eakirtas/quantization_demo)
 
