@@ -43,8 +43,8 @@ class QTensor(T.nn.Module):
 
     @T.no_grad()
     def set_bits(self, num_bits):
-        self.num_bits = num_bits
-        self.q_min, self.q_max = self.get_q(num_bits)
+        self.num_bits = T.tensor(num_bits)
+        self.q_min, self.q_max = self.get_q(self.num_bits)
 
     @T.no_grad()
     def get_q(self, num_bits):

@@ -11,14 +11,6 @@ python = ">=3.10, <=3.11.3"
 setuptools = "<=68.2.2"
 sexpdata = "<=1.0.0"
 torch = "^2.1.1"
-torchvision = "^0.16.1"
-torchaudio = "*"
-numpy = "*"
-tabulate = "*"
-matplotlib = "*"
-pandas = "*"
-wandb = "*"
-h5py = "*"
 
 
 [tool.poetry.group.dev.dependencies]
